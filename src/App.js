@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Footer from "./components/Footer";
+import TargetCursor from "./components/TargetCursor";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor={true}
+        parallaxOn={true}
+      />
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+
+      <Footer />
+    </>
   );
 }
 
