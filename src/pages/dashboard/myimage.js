@@ -289,51 +289,51 @@ const MyImages = () => {
       {/* Images Grid */}
       <div className="images-grid">
         {images.map((image) => (
-          <div key={image.id} className="image-card">
-            <div className="card-header">
-              <div className="file-type">
+          <div key={image.id} className="image-item-card">
+            <div className="image-card-header">
+              <div className="file-type-badge">
                 {getFileIcon(image.type)}
               </div>
-              <div className="card-actions">
-                <button className="action-btn">
+              <div className="image-card-actions">
+                <button className="image-action-btn">
                   <FontAwesomeIcon icon={faEllipsisV} />
                 </button>
               </div>
             </div>
             
-            <div className="image-preview">
+            <div className="image-thumbnail">
               <img src={image.thumbnail} alt={image.name} />
-              <div className="image-overlay">
+              <div className="image-thumbnail-overlay">
                 <button 
-                  className="icon-btn"
+                  className="thumbnail-action-btn"
                   onClick={() => copyUrl(image.url)}
                   title="Copy URL"
                 >
                   <FontAwesomeIcon icon={faCopy} />
                 </button>
-                <button className="icon-btn" title="Preview">
+                <button className="thumbnail-action-btn" title="Preview">
                   <FontAwesomeIcon icon={faEye} />
                 </button>
-                <button className="icon-btn" title="Share">
+                <button className="thumbnail-action-btn" title="Share">
                   <FontAwesomeIcon icon={faShare} />
                 </button>
-                <button className="icon-btn delete" title="Delete">
+                <button className="thumbnail-action-btn delete" title="Delete">
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </div>
             </div>
             
-            <div className="card-content">
-              <h4 className="image-title" title={image.name}>
+            <div className="image-card-body">
+              <h4 className="image-item-title" title={image.name}>
                 {image.name.length > 20 ? image.name.substring(0, 20) + '...' : image.name}
               </h4>
               
-              <div className="image-url">
-                <span className="url-text" title={image.url}>
+              <div className="image-url-container">
+                <span className="image-url-text" title={image.url}>
                   {image.url.replace('https://', '').substring(0, 25)}...
                 </span>
                 <button 
-                  className="copy-url-btn"
+                  className="copy-image-url-btn"
                   onClick={() => copyUrl(image.url)}
                   title="Copy URL"
                 >
@@ -341,22 +341,22 @@ const MyImages = () => {
                 </button>
               </div>
               
-              <div className="image-meta">
-                <div className="meta-item">
-                  <span className="meta-label">Size:</span>
-                  <span className="meta-value">{image.size}</span>
+              <div className="image-meta-info">
+                <div className="image-meta-item">
+                  <span className="image-meta-label">Size:</span>
+                  <span className="image-meta-value">{image.size}</span>
                 </div>
-                <div className="meta-item">
-                  <span className="meta-label">Dimensions:</span>
-                  <span className="meta-value">{image.dimensions}</span>
+                <div className="image-meta-item">
+                  <span className="image-meta-label">Dimensions:</span>
+                  <span className="image-meta-value">{image.dimensions}</span>
                 </div>
-                <div className="meta-item">
-                  <span className="meta-label">Views:</span>
-                  <span className="meta-value">{image.views.toLocaleString()}</span>
+                <div className="image-meta-item">
+                  <span className="image-meta-label">Views:</span>
+                  <span className="image-meta-value">{image.views.toLocaleString()}</span>
                 </div>
-                <div className="meta-item">
-                  <span className="meta-label">Uploaded:</span>
-                  <span className="meta-value">
+                <div className="image-meta-item">
+                  <span className="image-meta-label">Uploaded:</span>
+                  <span className="image-meta-value">
                     {new Date(image.uploaded).toLocaleDateString()}
                   </span>
                 </div>
@@ -375,25 +375,25 @@ const MyImages = () => {
 
       {/* Upload Modal */}
       {showUploadModal && (
-        <div className="modal-overlay">
-          <div className="upload-modal">
-            <div className="modal-header">
+        <div className="upload-modal-overlay">
+          <div className="upload-modal-container">
+            <div className="upload-modal-header">
               <h2>Upload Images</h2>
-              <button className="close-btn" onClick={handleCloseModal}>
+              <button className="upload-close-btn" onClick={handleCloseModal}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
 
-            <div className="modal-content">
+            <div className="upload-modal-body">
               {/* Upload Area */}
               <div 
-                className={`upload-area ${isDragging ? 'dragging' : ''}`}
+                className={`upload-drop-zone ${isDragging ? 'dragging' : ''}`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
               >
-                <div className="upload-content">
-                  <FontAwesomeIcon icon={faUpload} className="upload-icon" />
+                <div className="upload-drop-content">
+                  <FontAwesomeIcon icon={faUpload} className="upload-main-icon" />
                   <h3>Drop your images here</h3>
                   <p>or click to browse files</p>
                   <input 
@@ -401,47 +401,47 @@ const MyImages = () => {
                     accept="image/*" 
                     multiple
                     onChange={handleFileInput}
-                    className="file-input"
+                    className="upload-file-input"
                   />
                 </div>
               </div>
 
               {/* Uploaded Files List */}
               {uploadedFiles.length > 0 && (
-                <div className="uploaded-files">
+                <div className="uploaded-files-section">
                   <h4>Uploading Files ({uploadedFiles.length})</h4>
-                  <div className="files-list">
+                  <div className="uploaded-files-list">
                     {uploadedFiles.map((file) => (
-                      <div key={file.id} className="file-item">
-                        <div className="file-preview">
+                      <div key={file.id} className="uploaded-file-item">
+                        <div className="uploaded-file-preview">
                           <img src={file.url} alt={file.name} />
-                          <div className="file-overlay">
+                          <div className="uploaded-file-overlay">
                             {file.status === 'uploading' ? (
-                              <div className="upload-progress">
-                                <div className="progress-spinner"></div>
+                              <div className="upload-progress-indicator">
+                                <div className="upload-progress-spinner"></div>
                                 <span>Uploading...</span>
                               </div>
                             ) : (
-                              <FontAwesomeIcon icon={faCheck} className="upload-complete" />
+                              <FontAwesomeIcon icon={faCheck} className="upload-complete-icon" />
                             )}
                           </div>
                         </div>
-                        <div className="file-info">
-                          <span className="file-name">{file.name}</span>
-                          <span className="file-size">{file.size}</span>
+                        <div className="uploaded-file-info">
+                          <span className="uploaded-file-name">{file.name}</span>
+                          <span className="uploaded-file-size">{file.size}</span>
                         </div>
-                        <div className="file-actions">
+                        <div className="uploaded-file-actions">
                           {file.status === 'completed' && (
                             <>
                               <button 
-                                className="action-btn small"
+                                className="upload-action-btn"
                                 onClick={() => copyUrl(file.url)}
                                 title="Copy URL"
                               >
                                 <FontAwesomeIcon icon={faLink} />
                               </button>
                               <button 
-                                className="action-btn small delete"
+                                className="upload-action-btn delete"
                                 onClick={() => removeUploadedFile(file.id)}
                                 title="Remove"
                               >
@@ -457,7 +457,7 @@ const MyImages = () => {
               )}
             </div>
 
-            <div className="modal-actions">
+            <div className="upload-modal-actions">
               <button className="btn-secondary" onClick={handleCloseModal}>
                 Cancel
               </button>

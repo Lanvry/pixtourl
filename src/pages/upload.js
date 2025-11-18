@@ -298,7 +298,7 @@ function Upload() {
                   className="upload-actions"
                 >
                   <GlassSurface
-                    className="upload-btn cursor-target"
+                    className="upload-btn-home cursor-target"
                     onClick={handleUploadToStorage}
                   >
                     <FontAwesomeIcon icon={faCloudUpload} />
