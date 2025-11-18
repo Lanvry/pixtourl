@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Pixtourl 📸
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deskripsi Proyek
+**Pixtourl** adalah aplikasi web modern yang berfungsi sebagai alat pengunggah gambar (image uploader) yang cepat dan mudah. Dengan Pixtourl, Anda dapat mengunggah gambar dari perangkat Anda dan langsung menghasilkan URL publik yang dapat dibagikan. Aplikasi ini sangat cocok untuk berbagi gambar di forum, media sosial, atau dokumentasi.
 
-## Available Scripts
+Aplikasi ini dibangun menggunakan **React.js** untuk antarmuka pengguna yang dinamis dan **Tailwind CSS** untuk desain yang responsif dan dapat disesuaikan.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Fitur Utama
+- **Pengunggahan Mudah**: Antarmuka drag-and-drop atau klik untuk memilih file.  
+- **Pembuatan URL Instan**: Setelah gambar berhasil diunggah, URL akan langsung dibuat.  
+- **Salin Cepat**: Tombol untuk menyalin URL ke clipboard dengan satu klik.  
+- **Desain Responsif**: Tampilan yang optimal di berbagai ukuran perangkat.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Teknologi yang Digunakan
+- **Frontend**: React (Create React App)  
+- **Styling**: Tailwind CSS  
+- **Bahasa**: JavaScript  
 
-### `npm test`
+---
+## 📷 Screen Shoot
+### Landing Page
+### Landing Page ( Upload )
+### Authentication
+#### Daftar / Sign In 
+#### Masuk / Login
+### Dashboard
+### MyImages
+### Settings
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Memulai Proyek
 
-### `npm run build`
+### Prasyarat
+Pastikan Anda memiliki **Node.js** (termasuk npm atau yarn) terinstal di sistem Anda.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Kloning Repositori
+```bash
+git clone https://github.com/Lanvry/pixtourl.git
+cd pixtourl
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Instalasi Dependensi
+```bash
+npm install
+# atau
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Menjalankan Aplikasi
+```bash
+npm start
+# atau
+yarn start
+```
+#### 📦 Deployment (Produksi)
 
-### `npm run eject`
+Untuk membuat bundle aplikasi siap produksi ke dalam folder `build`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+# atau
+yarn build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📄 Lisensi
+Proyek ini dilisensikan di bawah **Lisensi MIT**.  
+Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✉️ Kontak
+**Nama Pengembang/Pemilik**: Lanvry  
+[Masukkan tautan profil GitHub Anda di sini]  
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧑‍🎓 Informasi Mahasiswa
+- **Nama**: Arjuna Lanang Adiwarsana  
+- **Kelas**: D3 Teknik Informatika  
+- **NRP**: 3125522010
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
