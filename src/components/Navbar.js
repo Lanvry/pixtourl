@@ -59,7 +59,7 @@ function Navbar() {
                 <a href="/upload" className="cursor-target">Upload</a>
               </li>
               <li>
-                <a href="/signup" className="btn-create cursor-target">
+                <a href="/auth/signup" className="btn-create cursor-target">
                   Create Account
                 </a>
               </li>

@@ -4,6 +4,9 @@ import { ScrollObserver, valueAtPercentage } from "aatjs";
 import TextPressure from "./TextPressure";
 import ScrollFloat from "./ScrollFloat";
 import GlassSurface from "./GlassSurface";
+import upload from "../images/upload.gif"
+import drag from "../images/drag.gif"
+import clickImage from "../images/click.gif"
 
 function StackScroll() {
   const cardsContainerRef = useRef(null);
@@ -93,15 +96,15 @@ function StackScroll() {
       >
         How To Access it?
       </ScrollFloat>
-      <div className="cards" ref={cardsContainerRef}>
+      <div className="cards" id="usages" ref={cardsContainerRef}>
         <div className="card" data-index="0" ref={addToCardsRef}>
             
           <div className="card__inner">
             <div className="card__image-container">
               <img
-                className="card__image"
-                src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
-                alt="Nature"
+                className="card__image cursor-target"
+                src={clickImage}
+                alt="Click"
               />
             </div>
             <div className="card__content">
@@ -116,9 +119,9 @@ function StackScroll() {
           <div className="card__inner">
             <div className="card__image-container">
               <img
-                className="card__image"
-                src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
-                alt="Nature"
+                className="card__image cursor-target"
+                src={drag}
+                alt="drag and drop"
               />
             </div>
             <div className="card__content">
@@ -133,9 +136,9 @@ function StackScroll() {
           <div className="card__inner">
             <div className="card__image-container">
               <img
-                className="card__image"
-                src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
-                alt="Nature"
+                className="card__image cursor-target"
+                src={upload}
+                alt="upload"
               />
             </div>
             <div className="card__content">

@@ -2,11 +2,18 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 import TargetCursor from "./components/TargetCursor";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
+import { Route, Routes, useLocation } from "react-router-dom";
+ 
 import Navbar from "./components/Navbar";
+ 
+import AppRoute from "./web/AppRoute";
 
 function App() {
+  document.title = "PIXTOURL - Konversi Gambar Ke Link"
+  const location = useLocation();
+  const hideLayout = ["/auth/login", "/auth/signup"].includes(location.pathname) ||
+    location.pathname.startsWith("/dashboard");
+
   return (
     <>
       <TargetCursor
@@ -14,13 +21,12 @@ function App() {
         hideDefaultCursor={true}
         parallaxOn={true}
       />
-      <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />}/>
-      </Routes>
+      {!hideLayout && <Navbar />}
 
-      <Footer />
+      <AppRoute/>
+
+      {!hideLayout && <Footer />}
     </>
   );
 }

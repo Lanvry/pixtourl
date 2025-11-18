@@ -1,0 +1,228 @@
+/* Settings Page Styles */
+.settings-page {
+  padding: 30px;
+  /* min-height: 100%; */
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* Settings Content */
+.settings-content {
+  max-width: 800px;
+}
+
+/* Settings Section */
+.settings-section {
+  background: var(--background-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.settings-section.danger-zone {
+  border-color: #ff4757;
+  background: rgba(255, 71, 87, 0.05);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.section-icon {
+  font-size: 24px;
+  margin-top: 2px;
+}
+
+.section-icon.danger {
+  color: #ff4757;
+}
+
+.section-title h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.section-title p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Section Content */
+.section-content {
+  padding-left: 39px; /* Align with section title */
+}
+
+/* Logout Card */
+.logout-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background: var(--background-color);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logout-card:hover {
+  border-color: #ff4757;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.1);
+}
+
+.logout-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.logout-icon {
+  font-size: 32px;
+  color: #ff4757;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: 50%;
+}
+
+.logout-details h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ff4757;
+}
+
+.logout-details p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.logout-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background: #ff3742;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 20px;
+  }
+
+  .settings-section {
+    padding: 20px;
+  }
+
+  .logout-card {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logout-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logout-details {
+    text-align: center;
+  }
+
+  .logout-details p {
+    max-width: none;
+  }
+
+  .section-content {
+    padding-left: 0;
+  }
+
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .section-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .settings-section {
+    padding: 15px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
