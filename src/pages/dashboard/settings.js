@@ -36,10 +36,10 @@ const Settings = () => {
           </div>
 
           <div className="section-content">
-            <div className="logout-card">
+            <div className="logout-card cursor-target">
               <div className="logout-info">
                 <FontAwesomeIcon icon={faSignOutAlt} className="logout-icon" />
-                <div className="logout-details cursor-target">
+                <div className="logout-details">
                   <h4>Logout</h4>
                   <p>Sign out from your account. You will need to login again to access your images.</p>
                 </div>
