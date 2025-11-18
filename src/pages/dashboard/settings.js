@@ -39,7 +39,7 @@ const Settings = () => {
             <div className="logout-card">
               <div className="logout-info">
                 <FontAwesomeIcon icon={faSignOutAlt} className="logout-icon" />
-                <div className="logout-details">
+                <div className="logout-details cursor-target">
                   <h4>Logout</h4>
                   <p>Sign out from your account. You will need to login again to access your images.</p>
                 </div>

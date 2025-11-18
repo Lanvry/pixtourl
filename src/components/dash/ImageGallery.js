@@ -47,7 +47,7 @@ const ImageGallery = () => {
       
       <div className="gallery-grid">
         {sampleImages.map((image) => (
-          <div key={image.id} className="gallery-item">
+          <div key={image.id} className="gallery-item cursor-target">
             <div className="image-container">
               <img src={image.thumbnail} alt={image.name} />
               <div className="image-overlay">

@@ -59,7 +59,7 @@ const RecentActivity = () => {
   };
 
   return (
-    <div className="recent-activity">
+    <div className="recent-activity cursor-target">
       <div className="activity-header">
         <h3>Recent Activity</h3>
         <div className="chart-actions">

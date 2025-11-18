@@ -31,7 +31,7 @@ const StatsCard = ({ title, value, icon, trend, change }) => {
   };
 
   return (
-    <div className="stat-card">
+    <div className="stat-card cursor-target">
       <div className="stat-card-header">
         <h3>{title}</h3>
         <FontAwesomeIcon icon={getIcon(icon)} />

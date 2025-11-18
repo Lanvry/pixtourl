@@ -25,7 +25,7 @@ const QuickUpload = () => {
   };
 
   return (
-    <div className="quick-upload">
+    <div className="quick-upload cursor-target">
       <div className="upload-area">
         <div className="upload-content">
           <FontAwesomeIcon icon={faCloudUploadAlt} className="upload-icon" />

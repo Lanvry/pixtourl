@@ -198,7 +198,7 @@ const MyImages = () => {
           <p>Manage and organize your uploaded images</p>
         </div>
         <div className="header-actions">
-          <button className="btn-primary" onClick={handleUploadClick}>
+          <button className="btn-primary cursor-target" onClick={handleUploadClick}>
             <FontAwesomeIcon icon={faCloudDownloadAlt} />
             Upload New
           </button>
@@ -206,7 +206,7 @@ const MyImages = () => {
       </div>
 
       {/* Storage Card */}
-      <div className="storage-card">
+      <div className="storage-card cursor-target">
         <div className="storage-header">
           <h3>Storage Overview</h3>
           <div className="storage-stats">
